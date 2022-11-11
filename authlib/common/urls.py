@@ -135,6 +135,9 @@ def extract_params(raw):
     if not raw:
         return None
 
+    if isinstance(raw, bytes):
+        raw = raw.decode()
+
     try:
         return url_decode(raw)
     except ValueError:
