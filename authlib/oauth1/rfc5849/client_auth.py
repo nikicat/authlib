@@ -175,7 +175,6 @@ class ClientAuth(object):
         else:
             # Omit body data in the signing of non form-encoded requests
             uri, headers, _ = self.sign(method, uri, headers, b'')
-            body = b''
         return uri, headers, body
 
 
